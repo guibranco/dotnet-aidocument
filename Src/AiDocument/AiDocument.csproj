@@ -1,0 +1,52 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFrameworks>net8.0;net9.0</TargetFrameworks>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+    <PackAsTool>true</PackAsTool>
+    <ToolCommandName>dotnet-aidocument</ToolCommandName>
+    <PackageOutputPath>./nupkg</PackageOutputPath>
+    <Title>AI document tool</Title>
+    <Authors>Guilherme Branco Stracini</Authors>
+    <Description>AI-powered XML documentation generator for .NET projects. Leveraging OpenAI's API, this tool analyzes your code and generates meaningful, human-readable XML documentation with the help of advanced AI</Description>
+    <PackageProjectUrl>https://guibranco.github.io/dotnet-aidocument</PackageProjectUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageIcon>aidocument-80x80.png</PackageIcon>
+    <RepositoryUrl>https://github.com/guibranco/dotnet-aidocument</RepositoryUrl>
+    <RepositoryType>Github</RepositoryType>
+    <PackageTags>AI, OpenAI, LLM, xml documentation, documentation, xml docs, auto-generated</PackageTags>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="Microsoft.Build" />
+    <None Remove="Microsoft.Extensions.Configuration.CommandLine" />
+    <None Remove="CommandLineParser" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="CommandLineParser" Version="2.9.1" />
+    <PackageReference Include="OpenAI" Version="2.0.0" />
+    <PackageReference Include="Spectre.Console" Version="0.49.1" />
+    <PackageReference Include="Spectre.Console.Analyzer" Version="1.0.0">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <AssemblyAttribute Include="System.Runtime.CompilerServices.InternalsVisibleTo">
+      <_Parameter1>AiDocument.Tests</_Parameter1>
+    </AssemblyAttribute>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\LICENSE" Pack="true" PackagePath="" Visible="false" />
+    <None Include="..\..\README.md" Pack="true" PackagePath="" Visible="false" />
+    <None Include="..\..\docs\images\aidocument-80x80.png" Pack="true" PackagePath="" Visible="false" />
+  </ItemGroup>
+</Project>
