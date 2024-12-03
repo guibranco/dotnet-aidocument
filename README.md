@@ -54,6 +54,26 @@ dotnet-aidocument generate
 
 ---
 
+## Sequence of Execution
+
+Here’s a flow diagram showing the sequence of execution of the `prepare-commit-msg` hook and its integration with `dotnet-aicommitmessage` to generate commit messages using the OpenAI API:
+
+```mermaid
+sequenceDiagram
+    participant User
+    participant Tool
+    participant OpenAI API
+    participant .NET Project
+
+    User->>Tool: Run command (generate)
+    Tool->>Project: Analyze undocumented members
+    Tool->>OpenAI API: Request documentation
+    OpenAI API-->>Tool: Return generated documentation
+    Tool-->>User: Output generated XML documentation
+```
+
+---
+
 ## Commands
 
 This tool provides several commands to simplify and customize the documentation process:
