@@ -1,6 +1,6 @@
 # ![Generate AI-Powered XML Documentation for .NET Projects](https://raw.githubusercontent.com/guibranco/dotnet-aidocument/main/docs/images/splash.png)
 
-📚 🤖 This tool generates AI-powered XML documentation for .NET projects, automating meaningful documentation creation using the OpenAI API.
+🧠 🤖 AI-powered XML documentation generator for .NET projects. Leveraging OpenAI's API, this tool analyzes your code and generates meaningful, human-readable XML documentation with the help of advanced AI. 
 
 [![GitHub last commit](https://img.shields.io/github/last-commit/guibranco/dotnet-aidocument)](https://github.com/guibranco/dotnet-aidocument)
 [![GitHub license](https://img.shields.io/github/license/guibranco/dotnet-aidocument)](https://github.com/guibranco/dotnet-aidocument)
