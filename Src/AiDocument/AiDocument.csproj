@@ -29,7 +29,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="CommandLineParser" Version="2.9.1" />
-    <PackageReference Include="OpenAI" Version="2.5.0" />
+    <PackageReference Include="OpenAI" Version="2.6.0" />
     <PackageReference Include="Spectre.Console" Version="0.53.0" />
     <PackageReference Include="Spectre.Console.Analyzer" Version="1.0.0">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
